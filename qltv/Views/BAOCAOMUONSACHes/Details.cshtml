@@ -1,0 +1,43 @@
+﻿@model qltv.Models.BAOCAOMUONSACH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BAOCAOMUONSACH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuotMuon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuotMuon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TiLe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiLe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAI_SACH.TenLoaiSach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAI_SACH.TenLoaiSach)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaBaoCaoMuon }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

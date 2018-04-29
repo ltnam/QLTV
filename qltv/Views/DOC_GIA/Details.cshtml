@@ -1,0 +1,83 @@
+﻿@model qltv.Models.DOC_GIA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DOC_GIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgaySinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayLapThe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayLapThe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TienNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HanThe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HanThe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAI_DOCGIA.TenLoaiDG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAI_DOCGIA.TenLoaiDG)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDG }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

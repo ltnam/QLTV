@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="w3-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("QLTV", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <div class="w3-dropdown-click">
+                        <button onclick="myFunction()" class="w3-button w3-black">Độc giả</button>
+                        <div id="Demo" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                            <a href="@Url.Action("Index", "DOC_GIA")" class="w3-bar-item w3-button">Danh Sách Độc giả</a>
+                            <a href="@Url.Action("Index", "LOAI_DOCGIA")" class="w3-bar-item w3-button">Loại Độc giả</a>
+                            <a href="@Url.Action("Index", "PHIEU_MUON_SACH")" class="w3-bar-item w3-button">Phiếu Mượn Sách</a>
+                            <a href="@Url.Action("Index", "PHIEU_THU_PHAT")" class="w3-bar-item w3-button">Phiếu Thu Phạt</a>
+                            <a href="@Url.Action("Index", "BAOCAOMUONSACHes")" class="w3-bar-item w3-button">Báo Cáo Mượn Sách</a>
+                            <a href="@Url.Action("Index", "BAOCAOSACHTRATREs")" class="w3-bar-item w3-button">Báo Cáo Trả Sách Trể</a>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="w3-dropdown-click">
+                        <button onclick="myFunction2()" class="w3-button w3-black">Sách</button>
+                        <div id="Demoo" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                            <a href="@Url.Action("Index", "LOAI_SACH")" class="w3-bar-item w3-button">Loại Sách</a>
+                            <a href="@Url.Action("Index", "SACHes")" class="w3-bar-item w3-button">Danh Sách Sách</a>
+                            <a href="@Url.Action("Index", "TAC_GIA")" class="w3-bar-item w3-button">Danh Sách Tác Giả</a>
+                        </div>
+                    </div>
+                </ul>
+
+               
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("Demo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        function myFunction2() {
+            var x = document.getElementById("Demoo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
